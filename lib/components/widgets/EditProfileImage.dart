@@ -128,10 +128,10 @@ class EditImageBSheetView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: AppFonts.s20),
             child: Row(
               children: [
-                ItemTile(onTap: ()=> onItemTap(ImageSource.camera),
+                _ItemTile(onTap: ()=> onItemTap(ImageSource.camera),
                     image: AppIcons.camera, name: AppStrings.camera),
                 const SizedBox(width: AppFonts.s20,),
-                ItemTile(onTap: ()=> onItemTap(ImageSource.gallery),
+                _ItemTile(onTap: ()=> onItemTap(ImageSource.gallery),
                     image: AppIcons.gallery, name: AppStrings.gallery),
               ],
             ),
@@ -142,11 +142,11 @@ class EditImageBSheetView extends StatelessWidget {
   }
 }
 
-class ItemTile extends StatelessWidget {
+class _ItemTile extends StatelessWidget {
   final String image;
   final String name;
   final Function()? onTap;
-  const ItemTile({super.key, required this.image, required this.name, this.onTap});
+  const _ItemTile({super.key, required this.image, required this.name, this.onTap});
 
   @override
   Widget build(BuildContext context) {
